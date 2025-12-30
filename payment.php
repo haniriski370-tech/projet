@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Payment - GameDeal</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -54,6 +54,6 @@
     <div id="paymentResult" style="margin-top:1rem;display:none;"></div>
   </main>
 
-  <script src="payment.js"></script>
+  <script src="assets/js/payment.js"></script>
 </body>
 </html>

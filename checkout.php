@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Checkout - GameDeal</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="navbar">
@@ -30,6 +30,6 @@
     </div>
   </main>
 
-  <script src="checkout.js"></script>
+  <script src="assets/js/checkout.js"></script>
 </body>
 </html>
