@@ -23,7 +23,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   render();
 
+  function showToast(message, timeout = 1200) {
+    let t = document.querySelector('.toast');
+    if (!t) {
+      t = document.createElement('div');
+      t.className = 'toast';
+      t.setAttribute('role', 'alert');
+      t.setAttribute('aria-live', 'assertive');
+      document.body.appendChild(t);
+    }
+    t.textContent = message;
+    t.classList.add('show');
+    clearTimeout(t._hideTimer);
+    t._hideTimer = setTimeout(() => t.classList.remove('show'), timeout + 200);
+  }
+
   proceedBtn.addEventListener('click', () => {
+    // require login before proceeding
+    const currentUser = localStorage.getItem('currentUser');
+    if (!currentUser) {
+      // save desired destination and come back after login
+      localStorage.setItem('postLoginRedirect', 'checkout.html');
+      showToast('Please log in to continue to checkout', 1000);
+      setTimeout(() => window.location.href = 'login.html', 1050);
+      return;
+    }
     // save a snapshot of checkout items and total
     localStorage.setItem('checkoutItems', JSON.stringify(cart));
     localStorage.setItem('checkoutTotal', totalEl.textContent);
