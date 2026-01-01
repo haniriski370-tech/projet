@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Payment - GameDeal</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <header class="navbar">
     <div class="inner">
-      <h1 class="logo"><a href="project.html">GameDeaL</a></h1>
+      <h1 class="logo"><a href="project.php">GameDeaL</a></h1>
       <div class="nav-actions">
-        <a class="home" href="project.html">Home</a>
-        <a class="login-link" href="login.html">Login</a>
+        <a class="home" href="project.php">Home</a>
+        <a class="login-link" href="auth/login.php">Login</a>
         <button class="cart-btn" id="cartBtn">🛒 Cart</button>
       </div>
     </div>
@@ -48,13 +48,13 @@
 
       <div style="margin-top:1rem;">
         <button type="submit" class="checkout-btn">Pay now</button>
-        <a href="checkout.html" style="margin-left:1rem;">Back</a>
+        <a href="checkout.php" style="margin-left:1rem;">Back</a>
       </div>
     </form>
 
     <div id="paymentResult" style="margin-top:1rem;display:none;"></div>
   </main>
 
-  <script src="payment.js"></script>
+  <script src="assets/js/payment.js"></script>
 </body>
 </html>

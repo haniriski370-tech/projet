@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Checkout - GameDeal</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="navbar">
     <div class="inner">
-      <h1 class="logo"><a href="project.html">GameDeaL</a></h1>
+      <h1 class="logo"><a href="project.php">GameDeaL</a></h1>
       <div class="nav-actions">
-        <a class="home" href="project.html">Home</a>
-        <a class="login-link" href="login.html">Login</a>
+        <a class="home" href="project.php">Home</a>
+        <a class="login-link" href="auth/login.php">Login</a>
         <button class="cart-btn" id="cartBtn">🛒 Cart</button>
       </div>
     </div>
@@ -27,10 +27,10 @@
 
     <div style="margin-top:1rem;">
       <button id="proceedPayment" class="checkout-btn">Proceed to Payment</button>
-      <a href="project2.html" style="margin-left:1rem;">Continue shopping</a>
+      <a href="project2.php" style="margin-left:1rem;">Continue shopping</a>
     </div>
   </main>
 
-  <script src="checkout.js"></script>
+  <script src="assets/js/checkout.js"></script>
 </body>
 </html>

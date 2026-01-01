@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('currentUser', JSON.stringify({ name, email }));
       showMessage(messageEl, 'Account created — redirecting...', true);
       // redirect to intended page after signup/login if present
-      const dest = localStorage.getItem('postLoginRedirect') || 'project.html';
+      const dest = localStorage.getItem('postLoginRedirect') || 'project.php';
       localStorage.removeItem('postLoginRedirect');
       setTimeout(() => window.location.href = dest, 1200);
     });
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       localStorage.setItem('currentUser', JSON.stringify({ name: user.name, email: user.email }));
       showMessage(messageEl, 'Login successful — redirecting...', true);
-      const dest = localStorage.getItem('postLoginRedirect') || 'project.html';
+      const dest = localStorage.getItem('postLoginRedirect') || 'project.php';
       localStorage.removeItem('postLoginRedirect');
       setTimeout(() => window.location.href = dest, 900);
     });

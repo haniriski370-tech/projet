@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GameDeal</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
@@ -12,10 +12,10 @@
 
   <header class="navbar">
     <div class="inner">
-      <h1 class="logo"><a href="project.html">GameDeaL</a></h1>
+      <h1 class="logo"><a href="project.php">GameDeaL</a></h1>
       <div class="nav-actions">
-        <a class="home" href="project.html">Home</a>
-        <a class="login-link" href="login.html">Login</a>
+        <a class="home" href="project.php">Home</a>
+        <a class="login-link" href="auth/login.php">Login</a>
         <button class="cart-btn" id="cartBtn">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
       </div>
     </div>
@@ -240,11 +240,11 @@
     <ul class="cart-items"></ul>
     <div class="cart-footer">
       <div class="total">Total: <span class="total-amount">$0.00</span></div>
-      <a class="checkout-btn" href="checkout.html">Checkout</a>
+      <a class="checkout-btn" href="checkout.php">Checkout</a>
     </div>
   </aside>
 
-  <script src="script.js"></script>
-  <script src="cart-animation.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/cart-animation.js"></script>
 </body>
 </html>

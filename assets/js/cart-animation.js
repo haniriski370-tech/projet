@@ -101,9 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentUser = localStorage.getItem('currentUser');
       if (!currentUser) {
         e.preventDefault();
-        localStorage.setItem('postLoginRedirect', 'checkout.html');
+        localStorage.setItem('postLoginRedirect', 'checkout.php');
           showToast('Please log in to place your order', 1000, '.products');
-          setTimeout(() => window.location.href = 'login.html', 1050);
+          setTimeout(() => window.location.href = 'auth/login.php', 1050);
       }
     });
   }

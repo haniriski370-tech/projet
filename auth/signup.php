@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sign Up - GameDeal</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/auth.css">
 </head>
 <body>
   <header class="navbar">
     <div class="inner">
-      <h1 class="logo"><a href="project.html">GameDeaL</a></h1>
+      <h1 class="logo"><a href="project.php">GameDeaL</a></h1>
       <div class="nav-actions">
-        <a class="home" href="project.html">Home</a>
-        <a class="home" href="login.html" style="margin-left:12px">Login</a>
+        <a class="home" href="project.php">Home</a>
+        <a class="home" href="auth/login.php" style="margin-left:12px">Login</a>
       </div>
     </div>
   </header>
@@ -36,11 +36,11 @@
 
         <button type="submit" class="checkout-btn">Sign up</button>
       </form>
-      <p class="muted">Already have an account? <a href="login.html">Log in</a></p>
+      <p class="muted">Already have an account? <a href="auth/login.php">Log in</a></p>
       <div id="message" class="auth-message" style="display:none"></div>
     </div>
   </main>
 
-  <script src="auth.js"></script>
+  <script src="../assets/js/auth.js"></script>
 </body>
 </html>

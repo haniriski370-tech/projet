@@ -43,15 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentUser = localStorage.getItem('currentUser');
     if (!currentUser) {
       // save desired destination and come back after login
-      localStorage.setItem('postLoginRedirect', 'checkout.html');
+      localStorage.setItem('postLoginRedirect', 'checkout.php');
       showToast('Please log in to continue to checkout', 1000);
-      setTimeout(() => window.location.href = 'login.html', 1050);
+      setTimeout(() => window.location.href = 'auth/login.php', 1050);
       return;
     }
     // save a snapshot of checkout items and total
     localStorage.setItem('checkoutItems', JSON.stringify(cart));
     localStorage.setItem('checkoutTotal', totalEl.textContent);
     // navigate to payment selection
-    window.location.href = 'payment.html';
+    window.location.href = 'payment.php';
   });
 });
