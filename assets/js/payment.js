@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // update header badge on pages if user navigates back; optional redirect after short delay
     setTimeout(() => {
-      window.location.href = 'project.html';
+      window.location.href = 'project.php';
     }, 2200);
   });
 });

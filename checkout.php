@@ -9,9 +9,10 @@
 <body>
   <header class="navbar">
     <div class="inner">
-      <h1 class="logo"><a href="project.html">GameDeaL</a></h1>
+      <h1 class="logo"><a href="project.php">GameDeaL</a></h1>
       <div class="nav-actions">
-        <a class="home" href="project.html">Home</a>
+        <a class="home" href="project.php">Home</a>
+        <a class="login-link" href="auth/login.php">Login</a>
         <button class="cart-btn" id="cartBtn">🛒 Cart</button>
       </div>
     </div>
@@ -26,7 +27,7 @@
 
     <div style="margin-top:1rem;">
       <button id="proceedPayment" class="checkout-btn">Proceed to Payment</button>
-      <a href="project2.html" style="margin-left:1rem;">Continue shopping</a>
+      <a href="project2.php" style="margin-left:1rem;">Continue shopping</a>
     </div>
   </main>
 

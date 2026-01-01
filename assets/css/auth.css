@@ -1,0 +1,47 @@
+/* Simple auth form styles */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.auth-card {
+  width: 550px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  
+}
+
+.auth-card h2 {
+margin-bottom: 0.75rem;
+}
+.auth-card label {
+display:block;
+margin-top:0.6rem;
+font-size:0.9rem;
+}
+.auth-card input {
+width:100%; padding:0.55rem; margin-top:0.35rem; border:1px solid #e6e6e6; border-radius:6px;
+}
+.auth-card .muted {
+margin-top:0.9rem; color:#666; font-size:0.9rem
+}
+.auth-card .auth-message {
+margin-top:0.9rem; padding:0.6rem; border-radius:6px;
+}
+.auth-card .auth-message.success {
+background: #e6ffef; color: #0a6b2b; border:1px solid #b7f0c9;
+}
+.auth-card .auth-message.error {
+background: #fff2f2; color: #a80000; border:1px solid #f1c6c6;
+}
+.checkout-btn {
+margin-top:1.2rem; width:100%; padding:0.75rem; background:#333435; color:#fff; border:none; border-radius:6px; font-size:1rem; cursor:pointer;
+}
+
+@media (max-width:480px) {
+  .auth-card { padding: 1rem; margin: 1rem; }
+}

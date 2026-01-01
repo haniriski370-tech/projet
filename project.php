@@ -13,9 +13,10 @@
 
   <header class="navbar">
     <div class="inner">
-      <h1 class="logo"><a href="project.html">GameDeaL</a></h1>
+      <h1 class="logo"><a href="project.php">GameDeaL</a></h1>
       <div class="nav-actions">
-        <a class="home" href="project.html">Home</a>
+        <a class="home" href="project.php">Home</a>
+        <a class="login-link" href="auth/login.php">Login</a>
         <button class="cart-btn" id="cartBtn">🛒 Cart <span class="cart-count" id="cartCount">0</span></button>
       </div>
     </div>
@@ -24,7 +25,7 @@
  <section class="hero">
     <h2>Save Your Money</h2>
     <p>The Big Games Deal In the Gaming Community</p>
-    <a class="primary-btn" href="project2.html">Shop Now</a>
+    <a class="primary-btn" href="project2.php">Shop Now</a>
   </section>
 
   <section class="products">
@@ -94,7 +95,7 @@
     <ul class="cart-items"></ul>
     <div class="cart-footer">
       <div class="total">Total: <span class="total-amount">$0.00</span></div>
-      <a class="checkout-btn" href="checkout.html">Checkout</a>
+      <a class="checkout-btn" href="checkout.php">Checkout</a>
     </div>
   </aside>
 

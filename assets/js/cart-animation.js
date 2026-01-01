@@ -94,7 +94,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (cartSidebar) {
     cartSidebar.addEventListener('mouseleave', closeCartFn);
+    // intercept checkout link in sidebar: require login (use delegation + toast)
+    cartSidebar.addEventListener('click', (e) => {
+      const link = e.target.closest && e.target.closest('a.checkout-btn');
+      if (!link) return;
+      const currentUser = localStorage.getItem('currentUser');
+      if (!currentUser) {
+        e.preventDefault();
+        localStorage.setItem('postLoginRedirect', 'checkout.php');
+          showToast('Please log in to place your order', 1000, '.products');
+          setTimeout(() => window.location.href = 'auth/login.php', 1050);
+      }
+    });
   }
+
+  // small toast helper
+   function showToast(msg, timeout = 1200, targetSelector) {
+      let t = document.querySelector('.toast');
+      if (!t) {
+        t = document.createElement('div');
+        t.className = 'toast';
+        t.setAttribute('role', 'alert');
+        t.setAttribute('aria-live', 'assertive');
+        document.body.appendChild(t);
+      }
+      // reset inline positioning
+      t.style.left = '';
+      t.style.top = '';
+      t.style.transform = '';
+
+      if (targetSelector) {
+        const target = document.querySelector(targetSelector);
+        if (target) {
+          const rect = target.getBoundingClientRect();
+          const left = rect.left + rect.width / 2;
+          const top = rect.top + 8; // small offset from top of section
+          t.style.left = `${left}px`;
+          t.style.top = `${top}px`;
+          t.style.transform = 'translate(-50%, 0)';
+        }
+      }
+
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(t._hideTimer);
+      t._hideTimer = setTimeout(() => t.classList.remove('show'), timeout + 200);
+   }
 
   if (closeCart) closeCart.addEventListener('click', closeCartFn);
 
