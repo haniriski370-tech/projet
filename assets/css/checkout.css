@@ -1,0 +1,125 @@
+/* ========================
+   CHECKOUT PAGE STYLES
+======================== */
+
+.checkout-page {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.checkout-page h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.checkout-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.checkout-items li {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+.checkout-items li:hover {
+    background: #f9f9f9;
+}
+
+.checkout-items li img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.checkout-items li .item-meta {
+    flex: 1;
+}
+
+.checkout-items li .item-meta .title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+.checkout-items li .item-meta .price-qty {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.checkout-summary {
+    font-size: 1.2rem;
+    text-align: right;
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+
+.checkout-btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #333;
+}
+
+a.continue-shopping {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.remove-item-btn {
+    background: #ff4d4f;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    transition: background 0.3s;
+}
+
+.remove-item-btn:hover {
+    background: #e60000;
+}
+
+
+@media (max-width: 600px) {
+    .checkout-items li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .checkout-items li img {
+        margin-bottom: 0.5rem;
+    }
+    .checkout-summary {
+        text-align: left;
+    }
+}

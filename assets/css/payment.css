@@ -1,0 +1,121 @@
+/* ===============================
+   Payment Page Styles
+================================ */
+
+/* Page Layout */
+.payment-page {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Headings */
+.payment-page h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.payment-page h3 {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    color: #444;
+}
+
+/* Form Labels */
+.payment-page label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+/* Radio Inputs */
+.payment-page input[type="radio"] {
+    margin-right: 0.5rem;
+    accent-color: #1e90ff; /* blue highlight */
+}
+
+/* Payment Method Icons */
+.payment-method-icon {
+    font-size: 1.5rem;
+}
+
+/* Card and PayPal Fields */
+#cardFields, #paypalFields {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Input Fields */
+.payment-page input[type="text"],
+.payment-page input[type="email"] {
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 360px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Card Expiry & CVV Fields */
+#cardFields div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Buttons */
+.checkout-btn {
+    padding: 0.7rem 1.2rem;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.checkout-btn:hover {
+    background-color: #0f6ecc;
+}
+
+/* Back Link */
+.payment-page a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.payment-page a:hover {
+    text-decoration: underline;
+}
+
+/* Order Summary List */
+.payment-page ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.payment-page ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Total Amount */
+.payment-page p strong {
+    font-size: 1.2rem;
+    color: #333;
+}
