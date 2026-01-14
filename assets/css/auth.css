@@ -45,3 +45,11 @@ margin-top:1.2rem; width:100%; padding:0.75rem; background:#333435; color:#fff; 
 @media (max-width:480px) {
   .auth-card { padding: 1rem; margin: 1rem; }
 }
+.auth-message {
+  display: block;
+  color: #e74c3c;
+  background: #fdecea;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}

@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const result = document.getElementById('paymentResult');
 
   // toggle fields
-  form.method.forEach(r => r.addEventListener('change', () => {
-    if (form.method.value === 'visa') {
+  const methodRadios = form.querySelectorAll('input[name="method"]');
+  methodRadios.forEach(r => r.addEventListener('change', () => {
+    if (form.querySelector('input[name="method"]:checked').value === 'visa') {
       cardFields.style.display = 'block';
       paypalFields.style.display = 'none';
     } else {
@@ -95,19 +96,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    // Normally here you'd call your payment gateway API.
-    // For demo: accept input and clear cart
-    const checkoutItems = JSON.parse(localStorage.getItem('checkoutItems') || '[]');
-    const total = localStorage.getItem('checkoutTotal') || '$0.00';
+    const selectedMethod = form.querySelector('input[name="method"]:checked').value;
 
     // validation for card method (visa)
-      if (form.method.value === 'visa') {
+    if (selectedMethod === 'visa') {
       const cardExpRaw = document.getElementById('cardExp')?.value || '';
       const digits = cardExpRaw.replace(/\D/g, '');
       if (digits.length !== 4) {
         result.style.display = 'block';
         result.innerHTML = '<strong style="color:#c00">Invalid expiry date. Use MM/YY.</strong>';
+        e.preventDefault();
         return;
       }
       const mm = parseInt(digits.slice(0, 2), 10);
@@ -116,11 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isNaN(mm) || mm < 1 || mm > 12) {
         result.style.display = 'block';
         result.innerHTML = '<strong style="color:#c00">Expiry month must be between 01 and 12.</strong>';
+        e.preventDefault();
         return;
       }
       if (isNaN(yy) || yy < 25 || yy > 45) {
         result.style.display = 'block';
         result.innerHTML = '<strong style="color:#c00">Expiry year must be between 25 and 45.</strong>';
+        e.preventDefault();
         return;
       }
       // validate CVV (3 digits)
@@ -128,22 +128,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!/^\d{3}$/.test(cvvVal)) {
         result.style.display = 'block';
         result.innerHTML = '<strong style="color:#c00">CVV must be exactly 3 digits.</strong>';
+        e.preventDefault();
         return;
       }
     }
 
-    // simulate success
-    result.style.display = 'block';
-    result.innerHTML = `<strong>Payment successful</strong><p>Amount charged: ${total}</p><p>Items: ${checkoutItems.length}</p>`;
-
-    // clear cart data
-    localStorage.removeItem('cartItems');
-    localStorage.removeItem('checkoutItems');
-    localStorage.removeItem('checkoutTotal');
-
-    // update header badge on pages if user navigates back; optional redirect after short delay
-    setTimeout(() => {
-      window.location.href = 'project.php';
-    }, 2200);
+    // If valid, let the form submit
   });
 });
